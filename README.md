@@ -7,6 +7,11 @@
 
 Gives you the `make:` commands that you know and love from Laravel - outside of Laravel. Ready to use in your next package.
 
+[![https://phppackagedevelopment.com](https://phppackagedevelopment.com/img/twitter-card_package_dev.png)](https://phppackagedevelopment.com)
+
+If you want to learn how to create reusable PHP packages yourself, take a look at my upcoming [PHP Package Development](https://phppackagedevelopment.com) video course.
+
+
 ## Installation
 
 You can install the package via composer:
