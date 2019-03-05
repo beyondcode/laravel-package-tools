@@ -24,6 +24,9 @@ abstract class GeneratorCommand
     /** @var Composer */
     protected $composer;
 
+    /** @var string|null */
+    public $outputPath;
+
     public function __construct()
     {
         $this->composer = new Composer();
@@ -118,7 +121,12 @@ abstract class GeneratorCommand
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
 
-        return getcwd().'/src/'.str_replace('\\', '/', $name).'.php';
+        return $this->getOutputPath().str_replace('\\', '/', $name).'.php';
+    }
+
+    protected function getOutputPath(): string
+    {
+        return $this->outputPath ?? getcwd().'/src/';
     }
 
     protected function getNameInput(): string
