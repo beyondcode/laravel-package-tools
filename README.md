@@ -29,17 +29,17 @@ The package will automatically detect your namespace from your `composer.json` a
 ## Available commands
 
 ```
-./vendor/bin/pkg-tools/make:command name [--command=] [--force]
+./vendor/bin/pkg-tools make:command name [--command=] [--force]
 
-./vendor/bin/pkg-tools/make:request name [--force]
+./vendor/bin/pkg-tools make:request name [--force]
 
-./vendor/bin/pkg-tools/make:job name [--sync] [--force]
+./vendor/bin/pkg-tools make:job name [--sync] [--force]
 
-./vendor/bin/pkg-tools/make:event name [--force]
+./vendor/bin/pkg-tools make:event name [--force]
 
-./vendor/bin/pkg-tools/make:notification name [--force]
+./vendor/bin/pkg-tools make:notification name [--force]
 
-./vendor/bin/pkg-tools/make:rule name [--force]
+./vendor/bin/pkg-tools make:rule name [--force]
 ``` 
 
 ### Testing
