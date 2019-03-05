@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+
+use Silly\Application;
+use Beyondcode\LaravelPackageTools\Commands\MakeCommand;
+use Beyondcode\LaravelPackageTools\Commands\MakeRequest;
+use Beyondcode\LaravelPackageTools\Commands\MakeJob;
+use Beyondcode\LaravelPackageTools\Commands\MakeEvent;
+use Beyondcode\LaravelPackageTools\Commands\MakeNotification;
+use Beyondcode\LaravelPackageTools\Commands\MakeRule;
+
+$version = '1.0.0';
+
+$app = new Application('Laravel Package Tools', $version);
+
+$app->command('make:command name [--command=] [--force]', new MakeCommand);
+$app->command('make:request name [--force]', new MakeRequest);
+$app->command('make:job name [--sync] [--force]', new MakeJob);
+$app->command('make:event name [--force]', new MakeEvent);
+$app->command('make:notification name [--force]', new MakeNotification);
+$app->command('make:rule name [--force]', new MakeRule);
+
+$app->run();
