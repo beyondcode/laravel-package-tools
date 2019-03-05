@@ -1,11 +1,11 @@
 {
-    "name": "beyondcode/laravel-package-tools",
+    "name": "BeyondCode/laravel-package-tools",
     "description": "Useful tools to help you with your next Laravel package.",
     "keywords": [
-        "beyondcode",
+        "BeyondCode",
         "laravel-package-tools"
     ],
-    "homepage": "https://github.com/beyondcode/laravel-package-tools",
+    "homepage": "https://github.com/BeyondCode/laravel-package-tools",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Beyondcode\\LaravelPackageTools\\": "src"
+            "BeyondCode\\LaravelPackageTools\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Beyondcode\\LaravelPackageTools\\Tests\\": "tests"
+            "BeyondCode\\LaravelPackageTools\\Tests\\": "tests"
         }
     },
     "scripts": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Beyondcode\LaravelPackageTools\Commands;
+namespace BeyondCode\LaravelPackageTools\Commands;
 
 class MakeRule extends GeneratorCommand
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Beyondcode\LaravelPackageTools\Commands\Tests;
+namespace BeyondCode\LaravelPackageTools\Commands\Tests;
 
 use PHPUnit\Framework\TestCase;
 

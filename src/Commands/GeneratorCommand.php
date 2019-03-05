@@ -1,6 +1,6 @@
 <?php
 
-namespace Beyondcode\LaravelPackageTools\Commands;
+namespace BeyondCode\LaravelPackageTools\Commands;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputInterface;

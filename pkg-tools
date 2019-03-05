@@ -4,12 +4,12 @@
 require 'vendor/autoload.php';
 
 use Silly\Application;
-use Beyondcode\LaravelPackageTools\Commands\MakeCommand;
-use Beyondcode\LaravelPackageTools\Commands\MakeRequest;
-use Beyondcode\LaravelPackageTools\Commands\MakeJob;
-use Beyondcode\LaravelPackageTools\Commands\MakeEvent;
-use Beyondcode\LaravelPackageTools\Commands\MakeNotification;
-use Beyondcode\LaravelPackageTools\Commands\MakeRule;
+use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
+use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
+use BeyondCode\LaravelPackageTools\Commands\MakeJob;
+use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
+use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
+use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 
 $version = '1.0.0';
 
