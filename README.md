@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/beyondcode/laravel-package-tools.svg?style=flat-square)](https://scrutinizer-ci.com/g/beyondcode/laravel-package-tools)
 [![Total Downloads](https://img.shields.io/packagist/dt/beyondcode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/beyondcode/laravel-package-tools)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Gives you the `make:` commands that you know and love from Laravel - outside of Laravel.
 
 ## Installation
 
@@ -17,9 +17,20 @@ composer require --dev beyondcode/laravel-package-tools
 
 ## Usage
 
-``` php
-// Usage description here
+You can use this package from the root of the package that you are developing. You can use the `pkg-tools` binary to create and scaffold new classes.
+
+The package will automatically detect your namespace from your `composer.json` autoload configuration and apply it to the generated files.
+
+## Available commands
+
 ```
+./vendor/bin/pkg-tools/make:command name [--command=] [--force]
+./vendor/bin/pkg-tools/make:request name [--force]
+./vendor/bin/pkg-tools/make:job name [--sync] [--force]
+./vendor/bin/pkg-tools/make:event name [--force]
+./vendor/bin/pkg-tools/make:notification name [--force]
+./vendor/bin/pkg-tools/make:rule name [--force]
+``` 
 
 ### Testing
 
