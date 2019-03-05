@@ -4,7 +4,7 @@ namespace BeyondCode\LaravelPackageTools\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ExampleCommand extends Command
+class ExampleTest__it_can_make_command_classes__1 extends Command
 {
     /**
      * The name and signature of the console command.

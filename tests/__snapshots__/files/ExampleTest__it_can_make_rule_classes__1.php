@@ -4,7 +4,7 @@ namespace BeyondCode\LaravelPackageTools\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class ExampleRule implements Rule
+class ExampleTest__it_can_make_rule_classes__1 implements Rule
 {
     /**
      * Create a new rule instance.

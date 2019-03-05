@@ -2,19 +2,19 @@
 
 namespace BeyondCode\LaravelPackageTools\Commands\Tests;
 
-use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
-use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
-use BeyondCode\LaravelPackageTools\Commands\MakeJob;
-use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
-use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
-use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 use PHPUnit\Framework\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
 use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+use BeyondCode\LaravelPackageTools\Commands\MakeJob;
+use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Output\BufferedOutput;
+use BeyondCode\LaravelPackageTools\Commands\MakeRule;
+use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
+use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
+use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
+use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 
 class GenerationTest extends TestCase
 {
@@ -28,17 +28,17 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeRule;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Rules/ExampleRule.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Rules/ExampleRule.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Rules/ExampleRule.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Rules/ExampleRule.php');
     }
 
     /** @test */
@@ -49,17 +49,17 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeCommand;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Console/Commands/ExampleCommand.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Console/Commands/ExampleCommand.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Console/Commands/ExampleCommand.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Console/Commands/ExampleCommand.php');
     }
 
     /** @test */
@@ -70,17 +70,17 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeRequest;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Http/Requests/ExampleRequest.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Http/Requests/ExampleRequest.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Http/Requests/ExampleRequest.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Http/Requests/ExampleRequest.php');
     }
 
     /** @test */
@@ -91,17 +91,17 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeJob;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Jobs/ExampleJob.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Jobs/ExampleJob.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Jobs/ExampleJob.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Jobs/ExampleJob.php');
     }
 
     /** @test */
@@ -112,17 +112,17 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeEvent;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Events/ExampleEvent.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Events/ExampleEvent.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Events/ExampleEvent.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Events/ExampleEvent.php');
     }
 
     /** @test */
@@ -133,16 +133,16 @@ class GenerationTest extends TestCase
             '--force' => true,
         ], new InputDefinition([
             new InputArgument('name'),
-            new InputOption('force')
+            new InputOption('force'),
         ]));
 
         $output = new BufferedOutput();
 
         $command = new MakeNotification;
-        $command->outputPath = __DIR__ . '/output/';
+        $command->outputPath = __DIR__.'/output/';
         $command->__invoke($input, $output);
 
-        $this->assertTrue(file_exists($command->outputPath . '/Notifications/ExampleNotification.php'));
-        $this->assertMatchesFileSnapshot($command->outputPath . '/Notifications/ExampleNotification.php');
+        $this->assertTrue(file_exists($command->outputPath.'/Notifications/ExampleNotification.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'/Notifications/ExampleNotification.php');
     }
 }
