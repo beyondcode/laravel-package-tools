@@ -2,7 +2,7 @@
 
 namespace Beyondcode\LaravelPackageTools\Commands;
 
-class MakeNotification extends GeneratorCommand
+class MakeRule extends GeneratorCommand
 {
     protected $type = 'Rule';
 
