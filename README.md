@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/beyondcode/laravel-package-tools.svg?style=flat-square)](https://scrutinizer-ci.com/g/beyondcode/laravel-package-tools)
 [![Total Downloads](https://img.shields.io/packagist/dt/beyondcode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/beyondcode/laravel-package-tools)
 
-Gives you the `make:` commands that you know and love from Laravel - outside of Laravel.
+Gives you the `make:` commands that you know and love from Laravel - outside of Laravel. Ready to use in your next package.
 
 ## Installation
 
@@ -25,10 +25,15 @@ The package will automatically detect your namespace from your `composer.json` a
 
 ```
 ./vendor/bin/pkg-tools/make:command name [--command=] [--force]
+
 ./vendor/bin/pkg-tools/make:request name [--force]
+
 ./vendor/bin/pkg-tools/make:job name [--sync] [--force]
+
 ./vendor/bin/pkg-tools/make:event name [--force]
+
 ./vendor/bin/pkg-tools/make:notification name [--force]
+
 ./vendor/bin/pkg-tools/make:rule name [--force]
 ``` 
 
