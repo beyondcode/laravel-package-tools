@@ -1,9 +1,9 @@
 # Laravel Package Tools
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/BeyondCode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/BeyondCode/laravel-package-tools)
-[![Build Status](https://img.shields.io/travis/BeyondCode/laravel-package-tools/master.svg?style=flat-square)](https://travis-ci.org/BeyondCode/laravel-package-tools)
-[![Quality Score](https://img.shields.io/scrutinizer/g/BeyondCode/laravel-package-tools.svg?style=flat-square)](https://scrutinizer-ci.com/g/BeyondCode/laravel-package-tools)
-[![Total Downloads](https://img.shields.io/packagist/dt/BeyondCode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/BeyondCode/laravel-package-tools)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/beyondcode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/beyondcode/laravel-package-tools)
+[![Build Status](https://img.shields.io/travis/beyondcode/laravel-package-tools/master.svg?style=flat-square)](https://travis-ci.org/beyondcode/laravel-package-tools)
+[![Quality Score](https://img.shields.io/scrutinizer/g/beyondcode/laravel-package-tools.svg?style=flat-square)](https://scrutinizer-ci.com/g/beyondcode/laravel-package-tools)
+[![Total Downloads](https://img.shields.io/packagist/dt/beyondcode/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/beyondcode/laravel-package-tools)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -12,7 +12,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require BeyondCode/laravel-package-tools
+composer require --dev beyondcode/laravel-package-tools
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ If you discover any security related issues, please email m.pociot@gmail.com ins
 
 ## Credits
 
-- [Marcel Pociot](https://github.com/BeyondCode)
+- [Marcel Pociot](https://github.com/beyondcode)
 - [All Contributors](../../contributors)
 
 ## License
