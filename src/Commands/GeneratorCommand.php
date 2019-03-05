@@ -96,6 +96,7 @@ abstract class GeneratorCommand
             $this->getDefaultNamespace(trim($rootNamespace, '\\')).'\\'.$name
         );
     }
+
     /**
      * Determine if the class already exists.
      *
@@ -140,7 +141,6 @@ abstract class GeneratorCommand
 
         return array_keys($autoload)[0];
     }
-
 
     protected function buildClass($name)
     {
@@ -190,5 +190,4 @@ abstract class GeneratorCommand
 
         return $default;
     }
-
 }

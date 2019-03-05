@@ -4,7 +4,7 @@ namespace BeyondCode\LaravelPackageTools\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ExampleRequest extends FormRequest
+class ExampleTest__it_can_make_request_classes__1 extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

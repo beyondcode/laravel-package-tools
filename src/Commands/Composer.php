@@ -18,10 +18,9 @@ class Composer
 
     protected function getComposerJson(): string
     {
-        $composerJson = getcwd() . '/composer.json';
+        $composerJson = getcwd().'/composer.json';
 
         if (! file_exists($composerJson)) {
-
         }
 
         return file_get_contents($composerJson);

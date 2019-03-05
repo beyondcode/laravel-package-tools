@@ -5,12 +5,10 @@ namespace BeyondCode\LaravelPackageTools\Events;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class ExampleEvent
+class ExampleTest__it_can_make_event_classes__1
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
