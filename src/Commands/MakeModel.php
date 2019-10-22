@@ -40,7 +40,7 @@ class MakeModel extends GeneratorCommand
 
     private function createMigration()
     {
-        $table = Str::snake(Str::pluralStudly(class_basename($this->getNameInput())));
+        $table = Str::snake(Str::plural(class_basename($this->getNameInput())));
 
         $this->runCommand("create_{$table}_table", ['--create' => "{$table}"], new MakeMigration);
 
