@@ -12,6 +12,7 @@ use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 use BeyondCode\LaravelPackageTools\Commands\MakeMigration;
 use BeyondCode\LaravelPackageTools\Commands\MakeFactory;
+use BeyondCode\LaravelPackageTools\Commands\MakeModel;
 
 $version = '1.0.0';
 
@@ -25,5 +26,6 @@ $app->command('make:notification name [--force]', new MakeNotification);
 $app->command('make:rule name [--force]', new MakeRule);
 $app->command('make:migration name [--create=] [--force]', new MakeMigration);
 $app->command('make:factory name [--model=] [--force]', new MakeFactory);
+$app->command('make:model name [--m|migration] [--f|factory] [--force]', new MakeModel);
 
 $app->run();

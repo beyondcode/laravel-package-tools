@@ -44,6 +44,8 @@ The package will automatically detect your namespace from your `composer.json` a
 ./vendor/bin/pkg-tools make:migration name [--create=] [--force]
 
 ./vendor/bin/pkg-tools make:factory name [--model=] [--force]
+
+./vendor/bin/pkg-tools make:model name [--m|migration] [--f|factory] [--force]
 ``` 
 
 ### Testing
