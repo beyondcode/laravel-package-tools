@@ -14,6 +14,7 @@ use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
 use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
 use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
+use BeyondCode\LaravelPackageTools\Commands\MakeFactory;
 use BeyondCode\LaravelPackageTools\Commands\MakeMigration;
 use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 
@@ -176,5 +177,28 @@ class GenerationTest extends TestCase
 
         $this->assertTrue(file_exists($command->outputPath.'../database/migrations/create_example_migrations_table.php'));
         $this->assertMatchesFileSnapshot($command->outputPath.'../database/migrations/create_example_migrations_table.php');
+    }
+
+    /** @test */
+    function it_can_make_model_factory_classes()
+    {
+        $input = new ArrayInput([
+            'name' => 'ExampleFactory',
+            '--model' => 'ExampleFactoryModel',
+            '--force' => true,
+        ], new InputDefinition([
+            new InputArgument('name'),
+            new InputOption('force'),
+            new InputOption('model'),
+        ]));
+
+        $output = new BufferedOutput();
+
+        $command = new MakeFactory;
+        $command->outputPath = $this->outputPath;
+        $command->__invoke($input, $output);
+
+        $this->assertTrue(file_exists($command->outputPath.'../database/factories/ExampleFactory.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'../database/factories/ExampleFactory.php');
     }
 }

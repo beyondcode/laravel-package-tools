@@ -42,6 +42,8 @@ The package will automatically detect your namespace from your `composer.json` a
 ./vendor/bin/pkg-tools make:rule name [--force]
 
 ./vendor/bin/pkg-tools make:migration name [--create=] [--force]
+
+./vendor/bin/pkg-tools make:factory name [--model=] [--force]
 ``` 
 
 ### Testing
