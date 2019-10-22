@@ -20,6 +20,14 @@ class GenerationTest extends TestCase
 {
     use MatchesSnapshots;
 
+    protected $outputPath;
+
+    function setUp(): void
+    {
+        parent::setUp();
+        $this->outputPath = __DIR__.'/output/src/';
+    }
+
     /** @test */
     public function it_can_make_rule_classes()
     {
@@ -34,7 +42,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeRule;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Rules/ExampleRule.php'));
@@ -55,7 +63,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeCommand;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Console/Commands/ExampleCommand.php'));
@@ -76,7 +84,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeRequest;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Http/Requests/ExampleRequest.php'));
@@ -97,7 +105,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeJob;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Jobs/ExampleJob.php'));
@@ -118,7 +126,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeEvent;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Events/ExampleEvent.php'));
@@ -139,7 +147,7 @@ class GenerationTest extends TestCase
         $output = new BufferedOutput();
 
         $command = new MakeNotification;
-        $command->outputPath = __DIR__.'/output/';
+        $command->outputPath = $this->outputPath;
         $command->__invoke($input, $output);
 
         $this->assertTrue(file_exists($command->outputPath.'/Notifications/ExampleNotification.php'));
