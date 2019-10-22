@@ -14,6 +14,7 @@ use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
 use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
 use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
+use BeyondCode\LaravelPackageTools\Commands\MakeMigration;
 use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 
 class GenerationTest extends TestCase
@@ -152,5 +153,28 @@ class GenerationTest extends TestCase
 
         $this->assertTrue(file_exists($command->outputPath.'/Notifications/ExampleNotification.php'));
         $this->assertMatchesFileSnapshot($command->outputPath.'/Notifications/ExampleNotification.php');
+    }
+
+    /** @test */
+    public function it_can_make_migration_classes()
+    {
+        $input = new ArrayInput([
+            'name' => 'create_example_migrations_table',
+            '--create' => 'example_migrations',
+            '--force' => true,
+        ], new InputDefinition([
+            new InputArgument('name'),
+            new InputOption('force'),
+            new InputOption('create'),
+        ]));
+
+        $output = new BufferedOutput();
+
+        $command = new MakeMigration;
+        $command->outputPath = $this->outputPath;
+        $command->__invoke($input, $output);
+
+        $this->assertTrue(file_exists($command->outputPath.'../database/migrations/create_example_migrations_table.php'));
+        $this->assertMatchesFileSnapshot($command->outputPath.'../database/migrations/create_example_migrations_table.php');
     }
 }

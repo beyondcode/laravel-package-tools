@@ -10,6 +10,7 @@ use BeyondCode\LaravelPackageTools\Commands\MakeJob;
 use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
 use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 use BeyondCode\LaravelPackageTools\Commands\MakeRule;
+use BeyondCode\LaravelPackageTools\Commands\MakeMigration;
 
 $version = '1.0.0';
 
@@ -21,5 +22,6 @@ $app->command('make:job name [--sync] [--force]', new MakeJob);
 $app->command('make:event name [--force]', new MakeEvent);
 $app->command('make:notification name [--force]', new MakeNotification);
 $app->command('make:rule name [--force]', new MakeRule);
+$app->command('make:migration name [--create=] [--force]', new MakeMigration);
 
 $app->run();
