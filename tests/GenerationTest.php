@@ -14,8 +14,8 @@ use BeyondCode\LaravelPackageTools\Commands\MakeRule;
 use BeyondCode\LaravelPackageTools\Commands\MakeEvent;
 use BeyondCode\LaravelPackageTools\Commands\MakeModel;
 use BeyondCode\LaravelPackageTools\Commands\MakeCommand;
-use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
 use BeyondCode\LaravelPackageTools\Commands\MakeFactory;
+use BeyondCode\LaravelPackageTools\Commands\MakeRequest;
 use BeyondCode\LaravelPackageTools\Commands\MakeMigration;
 use BeyondCode\LaravelPackageTools\Commands\MakeNotification;
 
@@ -25,7 +25,7 @@ class GenerationTest extends TestCase
 
     protected $outputPath;
 
-    function setUp(): void
+    public function setUp(): void
     {
         parent::setUp();
         $this->outputPath = __DIR__.'/output/src/';
@@ -181,7 +181,7 @@ class GenerationTest extends TestCase
     }
 
     /** @test */
-    function it_can_make_model_factory_classes()
+    public function it_can_make_model_factory_classes()
     {
         $input = new ArrayInput([
             'name' => 'ExampleFactory',
@@ -235,7 +235,7 @@ class GenerationTest extends TestCase
     }
 
     /** @test */
-    function it_can_make_model_classes_without_factories_and_migrations()
+    public function it_can_make_model_classes_without_factories_and_migrations()
     {
         $input = new ArrayInput([
             'name' => 'SingleModel',

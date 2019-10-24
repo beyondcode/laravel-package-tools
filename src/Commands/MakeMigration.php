@@ -15,7 +15,7 @@ class MakeMigration extends GeneratorCommand
 
     protected function qualifyClass($name)
     {
-        return $this->rootNamespace() . '\\..\\database\\migrations\\' . $name;
+        return $this->rootNamespace().'\\..\\database\\migrations\\'.$name;
     }
 
     protected function replaceClass($stub, $name)
@@ -28,6 +28,7 @@ class MakeMigration extends GeneratorCommand
     protected function getClassName($stub, $name)
     {
         $class = str_replace($this->getNamespace($name).'\\', '', $name);
+
         return ucfirst(Str::camel($class));
     }
 }

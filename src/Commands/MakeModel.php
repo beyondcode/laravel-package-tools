@@ -4,10 +4,10 @@ namespace BeyondCode\LaravelPackageTools\Commands;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputDefinition;
-use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -19,11 +19,11 @@ class MakeModel extends GeneratorCommand
     {
         parent::__invoke($input, $output);
 
-        if($this->input->getOption('migration')) {
+        if ($this->input->getOption('migration')) {
             $this->createMigration();
         }
 
-        if($this->input->getOption('factory')) {
+        if ($this->input->getOption('factory')) {
             $this->createFactory();
         }
     }
@@ -44,7 +44,7 @@ class MakeModel extends GeneratorCommand
 
         $this->runCommand("create_{$table}_table", ['--create' => "{$table}"], new MakeMigration);
 
-        $this->info(PHP_EOL . "Created migration: create_{$table}_table");
+        $this->info(PHP_EOL."Created migration: create_{$table}_table");
     }
 
     protected function createFactory()
@@ -53,21 +53,23 @@ class MakeModel extends GeneratorCommand
 
         $this->runCommand("{$model}Factory", ['--model' => "{$model}"], new MakeFactory);
 
-        $this->info(PHP_EOL . "Factory created successfully.");
+        $this->info(PHP_EOL.'Factory created successfully.');
     }
 
     protected function runCommand($name, $options, GeneratorCommand $command)
     {
-        $input = new ArrayInput(array_merge([
+        $input = new ArrayInput(
+            array_merge([
             'name'  => $name,
             '--force' => false,
-        ], $options),
+            ], $options),
             new InputDefinition([
                 new InputArgument('name'),
                 new InputOption('create'),
                 new InputOption('model'),
                 new InputOption('force'),
-        ]));
+            ])
+        );
 
         $output = new BufferedOutput();
 

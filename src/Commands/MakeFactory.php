@@ -13,14 +13,14 @@ class MakeFactory extends GeneratorCommand
 
     protected function qualifyClass($name)
     {
-        return $this->rootNamespace() . '\\..\\database\\factories\\' . $name;
+        return $this->rootNamespace().'\\..\\database\\factories\\'.$name;
     }
 
     protected function replaceNamespace(&$stub, $name)
     {
         $stub = str_replace(
             ['DummyNamespace', 'DummyRootNamespace\\'],
-            ['Models\\' . $this->option('model', 'Factory'), $this->rootNamespace()],
+            ['Models\\'.$this->option('model', 'Factory'), $this->rootNamespace()],
             $stub
         );
 
@@ -29,6 +29,6 @@ class MakeFactory extends GeneratorCommand
 
     protected function replaceClass($stub, $name)
     {
-        return str_replace('Dummy::class', $this->option('model', 'Factory') . '::class', $stub);
+        return str_replace('Dummy::class', $this->option('model', 'Factory').'::class', $stub);
     }
 }
