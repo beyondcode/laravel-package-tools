@@ -1,0 +1,12 @@
+<?php
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use DummyRootNamespace\DummyNamespace;
+use Faker\Generator as Faker;
+
+$factory->define(Dummy::class, function (Faker $faker) {
+    return [
+        //
+    ];
+});
